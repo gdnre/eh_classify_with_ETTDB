@@ -98,6 +98,10 @@ def HandleMangaList():
                 tPath = os.path.join(targetPath,unsortDir,mangaTitle)
                 print("未在数据库中匹配到作者名或团队，移动到",tPath)
                 MoveFile(oPath,tPath)
+        else:
+            tPath = os.path.join(targetPath,unsortDir,mangaTitle)
+            print("没有在文件名中匹配到作者，移动到",tPath)
+            MoveFile(oPath,tPath)
         print("===================================================================================")
 
 def GetSortPath(artist,group):
